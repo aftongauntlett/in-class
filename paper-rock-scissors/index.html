@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Random Numbers</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        var rps = ["rock", "paper", "scissors"];
+        var score = 0
+        var userChoice = prompt("Do you choose Rock, Paper or Scissors?").toLowerCase();
+        var index = Math.floor(Math.random() * 3);
+        var compChoice = rps[index]
+        console.log(compChoice, userChoice);
+
+        if (userChoice === rps[0]) {
+            console.log("rock")
+            if (compChoice === rps[0]) {
+                console.log("tie")
+            }
+            if (compChoice === rps[1]) {
+                console.log("loss")
+                score--
+            }
+            if (compChoice === rps[2]) {
+                console.log("win")
+                score++
+            }
+
+        }
+
+        if (userChoice === rps[1]) {
+            console.log("paper")
+            if (compChoice === rps[0]) {
+                console.log("win")
+                score++
+            }
+            if (compChoice === rps[1]) {
+                console.log("tie")
+            }
+            if (compChoice === rps[2]) {
+                console.log("loss")
+                score--
+            }
+
+        }
+        if (userChoice === rps[2]) {
+            console.log("scissors")
+            if (compChoice === rps[0]) {
+                console.log("loss")
+                score--
+            }
+            if (compChoice === rps[1]) {
+                console.log("win")
+                score++
+            }
+            if (compChoice === rps[2]) {
+                console.log("tie")
+            }
+
+        }
+        console.log(score)
+
+
+
+
+
+    </script>
+</body>
+
+</html>
