@@ -1,0 +1,21 @@
+body {
+    background-color: bisque;
+}
+
+.blue {
+    background-color: blue;
+    color: cornsilk;
+    
+}
+
+.red {
+    background-color: red;
+    color: cornsilk;
+}
+
+.grid-block {
+    font-weight: bold;
+    min-height: 50px;
+    
+    
+}
