@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selecting Elements from The DOM</title>
+</head>
+
+<body>
+  <script>
+    
+    function vowelCount(str1)
+    {
+      var vowels = 'aeiouAEIOU';
+      var count = 0;
+      
+      for(var x = 0; x < str1.length ; x++)
+      {
+        if (vowels.indexOf(str1[x]) !== -1)
+      {
+        vcount += 1;
+      }
+      
+    }
+    return count;
+  }
+  console.log(vowelCount("hello"));
+  // console.log(vowel_count("you are great!"));
+  // console.log(vowel_count("why?"));
+
+</script>
+
+</body>
+
+<!-- var vowels = "aeiouy";
+var count = 0;
+
+
+function vowels () {
+vowels.indexOf("a","e","i","o","u", "y")
+
+}
+
+console.log(vowels("hello")) -->
