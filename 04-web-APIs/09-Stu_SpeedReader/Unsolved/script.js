@@ -11,6 +11,7 @@ var poemText = document.querySelector("p")
 
 // created count to iterate over the array
 var count = 0
+var countDown = 3
 
 h1Tag.setAttribute("style", "font-size: 50px;")
 h2Tag.setAttribute("style", "font-size: 50px;")
@@ -18,9 +19,17 @@ pTag.setAttribute("style", "font-size: 50px; color: #c25ba6;")
 viewPort.setAttribute("style", "background-color: #ede8ec; text-align: center;")
 
 
-
+// created this if/else statement so a 3 second countdown timer will run in the <p>. Once it hits 0, it will call the speedread function. 
 function prepareRead() {
-  setTimeout(speedRead, 3000)
+  poemText.innerHTML = "..." + countDown
+  if (countDown === 0) {
+    speedRead()
+  }
+  else {
+    // this will count down by 1 and rerun this function until it equals 0 
+    countDown--
+    setTimeout(prepareRead, 1000)
+  }
 }
 
 prepareRead()
