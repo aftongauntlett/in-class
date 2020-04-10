@@ -20,6 +20,7 @@ function renderTodos() {
     li.textContent = todo;
     todoList.appendChild(li);
 
+
     var btn = document.createElement("button");
     btn.textContent = "complete"
     li.appendChild(btn);
